@@ -8,6 +8,8 @@ print("")
 print(Fore.LIGHTYELLOW_EX + "The Vigenère Cipher Converter".center(40," ") )
 print(Fore.CYAN + "By: Mishal Noroña".center(40," ") )
 # asks the user for the plaintext (all uppercase letters, no spaces)
+message = input (Fore.RESET + 'Enter your Message: ' + Fore.BLUE).upper().replace(' ','')      #(all uppercase letters, no spaces)
+key = input (Fore.RESET + 'Enter your Key: ' + Fore.BLUE).upper().replace(' ','')              #(all uppercase letters, no spaces)
 # define user's input
 # formula for encryption 
 # encrypt the message
