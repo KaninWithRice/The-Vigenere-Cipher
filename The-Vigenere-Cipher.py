@@ -56,5 +56,35 @@ def decrypt(cipher_txt, key):
 
 decrypted_message = decrypt(cipher_txt, key)
 # add loading time
+import time
+import sys
+
+done = 'false'
 # add animation
+def animate():
+        sys.stdout.write(Fore.LIGHTYELLOW_EX + '\n\rLoading Please Wait [□□□□□□□□□□]   0%')
+        time.sleep(0.5)
+        sys.stdout.write('\rLoading Please Wait [■□□□□□□□□□]  10%')
+        time.sleep(0.5)
+        sys.stdout.write('\rLoading Please Wait [■■□□□□□□□□]  20%')
+        time.sleep(0.5)
+        sys.stdout.write('\rLoading Please Wait [■■■□□□□□□□]  30%')
+        time.sleep(0.5)
+        sys.stdout.write('\rLoading Please Wait [■■■■□□□□□□]  40%')
+        time.sleep(0.5)
+        sys.stdout.write('\rLoading Please Wait [■■■■■□□□□□]  50%')
+        time.sleep(0.5)
+        sys.stdout.write('\rLoading Please Wait [■■■■■■□□□□]  60%')
+        time.sleep(0.5)
+        sys.stdout.write('\rLoading Please Wait [■■■■■■■□□□]  70%')
+        time.sleep(0.5)
+        sys.stdout.write('\rLoading Please Wait [■■■■■■■■□□]  80%')
+        time.sleep(0.5)
+        sys.stdout.write('\rLoading Please Wait [■■■■■■■■■□]  90%')
+        time.sleep(0.5)
+        sys.stdout.write('\rLoading Please Wait [■■■■■■■■■■]  100%')
+        time.sleep(0.5)
+        sys.stdout.write(Fore.LIGHTGREEN_EX + '\nLoading Complete\n\n')
+
+animate()
 # print output
