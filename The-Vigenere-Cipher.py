@@ -38,7 +38,23 @@ def enc_dec_ltr(message_ltr, key_ltr, process='encrypt'):
         return chr(new_ltr + ord(first_letter))
     return message_ltr
 # encrypt the message
+def encrypt(message, key):
+    cipher_txt = ''
+    out_key = input_key(message, key)
+    for message_ltr, key_ltr in zip(message, out_key):
+        cipher_txt += enc_dec_ltr(message_ltr, key_ltr)
+    return cipher_txt
+
+cipher_txt = encrypt(message, key)
 # decrypt the message
+def decrypt(cipher_txt, key):
+    message = ''
+    out_key = input_key(cipher_txt, key)
+    for cipher_txt_ltr, key_ltr in zip(cipher_txt, out_key):
+        message += enc_dec_ltr(cipher_txt_ltr, key_ltr, process='decrypt')
+    return message
+
+decrypted_message = decrypt(cipher_txt, key)
 # add loading time
 # add animation
 # print output
