@@ -11,6 +11,16 @@ print(Fore.CYAN + "By: Mishal Noroña".center(40," ") )
 message = input (Fore.RESET + 'Enter your Message: ' + Fore.BLUE).upper().replace(' ','')      #(all uppercase letters, no spaces)
 key = input (Fore.RESET + 'Enter your Key: ' + Fore.BLUE).upper().replace(' ','')              #(all uppercase letters, no spaces)
 # define user's input
+def input_key(message, key):
+    out_key = ''
+    x = 0
+    for ltr in message:
+        if ltr.isalpha():
+            out_key += key[x % len(key)]
+            x += 1
+        else:
+            out_key += ' '
+    return out_key
 # formula for encryption 
 # encrypt the message
 # decrypt the message
