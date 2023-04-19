@@ -4,6 +4,9 @@ import colorama
 from colorama import Fore, Back, Style
 colorama.init()
 # add introduction
+print("")
+print(Fore.LIGHTYELLOW_EX + "The Vigenère Cipher Converter".center(40," ") )
+print(Fore.CYAN + "By: Mishal Noroña".center(40," ") )
 # asks the user for the plaintext (all uppercase letters, no spaces)
 # define user's input
 # formula for encryption 
