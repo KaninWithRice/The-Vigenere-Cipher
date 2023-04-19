@@ -22,6 +22,21 @@ def input_key(message, key):
             out_key += ' '
     return out_key
 # formula for encryption 
+def enc_dec_ltr(message_ltr, key_ltr, process='encrypt'):
+    if message_ltr.isalpha():
+        first_letter = 'a'
+        if message_ltr.isupper():
+            first_letter = 'A'
+
+        old_ltr = ord(message_ltr) - ord(first_letter)
+        key_ltr = ord(key_ltr.lower()) - ord('a')
+
+        if process == 'encrypt':
+            new_ltr = (old_ltr + key_ltr) % 26
+        else:
+            new_ltr = (old_ltr - key_ltr + 26) % 26
+        return chr(new_ltr + ord(first_letter))
+    return message_ltr
 # encrypt the message
 # decrypt the message
 # add loading time
