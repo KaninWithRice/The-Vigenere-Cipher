@@ -88,3 +88,7 @@ def animate():
 
 animate()
 # print output
+print(Fore.RESET + 'Message :' + Fore.GREEN + message)
+print(Fore.RESET + 'Key :' + Fore.GREEN + key)
+print(Fore.RESET + 'Cipher Text :' + Fore.GREEN + cipher_txt)
+print(Fore.RESET + 'Decrypted Message:' + Fore.GREEN + decrypted_message)
